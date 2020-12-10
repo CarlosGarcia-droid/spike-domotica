@@ -13,14 +13,10 @@ api.get('/getPeticion', async (req, res) => {
         name: faker.name.jobDescriptor(),
         id: faker.random.alphaNumeric()
     };
-    console.log(peticion);
     //data = JSON.parse(peticion);
     data = JSON.stringify(peticion);
-    console.log(data);
-    
     peticion = JSON.parse(data);
-    console.log(peticion);
     res.json({peticion});
 });
 
-module.exports = api; 
+module.exports = api;
